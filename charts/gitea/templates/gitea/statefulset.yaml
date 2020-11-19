@@ -20,7 +20,7 @@ spec:
       labels:
         {{- include "gitea.selectorLabels" . | nindent 8 }}
         {{- with .Values.gitea.podLabels }}
-        {{ toYaml . | indent 8 }}
+        {{ toYaml . | nindent 8 }}
         {{- end }}
     spec:
       securityContext:
