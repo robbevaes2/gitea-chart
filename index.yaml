@@ -3,7 +3,7 @@ entries:
   gitea:
   - apiVersion: v2
     appVersion: 1.12.6
-    created: "2020-11-19T15:25:19.2320142+01:00"
+    created: "2020-11-19T15:37:04.4935571+01:00"
     dependencies:
     - condition: gitea.cache.builtIn.enabled
       name: memcached
@@ -22,7 +22,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 8.0.0
     description: Gitea Helm chart for Kubernetes
-    digest: 4c87e8547fb00e8a9a63e49f855782260c86fd4210b6f4ed1c91c765363d5808
+    digest: b7be2b2922d29f833214f13778f0896e45ac75863df920be39e8339a1421b8c5
     icon: https://docs.gitea.io/images/gitea.png
     keywords:
     - git
@@ -49,4 +49,4 @@ entries:
     urls:
     - https://github.com/robbevaes2/gitea-chart/releases/download/gitea-2.0.3/gitea-2.0.3.tgz
     version: 2.0.3
-generated: "2020-11-19T15:25:18.9601758+01:00"
+generated: "2020-11-19T15:37:04.2201717+01:00"
