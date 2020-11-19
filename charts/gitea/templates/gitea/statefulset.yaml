@@ -18,10 +18,10 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
       labels:
-        {{- with .Values.podLabels }}
+        {{- include "gitea.selectorLabels" . | nindent 8 }}
+        {{- with .Values.gitea.podLabels }}
         {{ toYaml . | indent 8 }}
         {{- end }}
-        {{- include "gitea.selectorLabels" . | nindent 8 }}
     spec:
       securityContext:
         fsGroup: 1000
