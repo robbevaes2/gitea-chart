@@ -4,7 +4,6 @@ metadata:
   name: {{ include "gitea.fullname" . }}
   labels:
     {{- include "gitea.labels" . | nindent 4 }}
-    environment: services
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -19,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
       labels:
-        environment: services
+        app.kubernetes.io/environment: {{ include "services" .}}
         {{- include "gitea.selectorLabels" . | nindent 8 }}
     spec:
       securityContext:
