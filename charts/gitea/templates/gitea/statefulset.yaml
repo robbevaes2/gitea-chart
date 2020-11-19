@@ -18,7 +18,9 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
       labels:
-        app.kubernetes.io/environment: {{ include "services" .}}
+        {{- with .Values.podLabels }}
+        {{ toYaml . | indent 8 }}
+        {{- end }}
         {{- include "gitea.selectorLabels" . | nindent 8 }}
     spec:
       securityContext:
